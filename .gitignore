@@ -1,5 +1,4 @@
-**/
-.idea/
-*.iml
-Makefile
-.hgignore
+/*
+!/tests/
+!/aosp.py
+!/README.md

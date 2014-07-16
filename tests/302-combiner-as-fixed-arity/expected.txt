@@ -1,0 +1,8 @@
+asListVar.invoke(1).toString() = [1]
+"asListFix.invoke((Object)1);" -> ClassCastException
+asListVar.invoke("two", "too").toString() = [two, too]
+"asListFix.invoke("two", "too");" -> WrongMethodTypeException
+asListVar.invoke(argv).toString() = [three, thee, tee]
+asListFix.invoke(argv).toString() = [three, thee, tee]
+asListVar.invoke((Object)argv)).size() = 1
+asListFix.invoke((Object)argv).toString() = [three, thee, tee]

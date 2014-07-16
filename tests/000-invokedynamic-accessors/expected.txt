@@ -1,0 +1,9 @@
+  boolean -> before: false - after: true
+  byte -> before: 0 - after: 25
+  char -> before:  - after: c
+  short -> before: 0 - after: 25
+  int -> before: 0 - after: 25
+  long -> before: 0 - after: 25
+  float -> before: 0.0 - after: 25.5
+  double -> before: 0.0 - after: 25.5
+  Object -> before: null - after: not null

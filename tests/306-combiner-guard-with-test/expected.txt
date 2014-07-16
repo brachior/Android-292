@@ -1,0 +1,2 @@
+gwt.invoke(1, 2) = a != b
+gwt.invoke(2, 2) = a == b

@@ -1,0 +1,4 @@
+  invoker -> (Object) invokeExact(mh, (Object) 2, (Object) 290):
+	292.0 -> OK
+  invoker -> (Object) invoke(mh, 2, 290):
+	292.0 -> OK

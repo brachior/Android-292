@@ -1,0 +1,4 @@
+  virtual -> new Range("invoke", "dynamic").concat('#', 2.F, 9L, 2.):
+	invoke #292 dynamic -> OK
+  static -> Range.concat("invoke", "dynamic", '#', 2.F, 9L, 2.):
+	invoke #292 dynamic -> OK

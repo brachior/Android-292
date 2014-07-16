@@ -1,0 +1,19 @@
+static boolean: [] - OK
+static byte: [] - OK
+static char: [] - OK
+static short: [] - OK
+static int: [] - OK
+static long: [] - OK
+static float: [] - OK
+static double: [] - OK
+static Object: [] - OK
+ --------------- 
+virtual boolean: [] - OK
+virtual byte: [] - OK
+virtual char: [] - OK
+virtual short: [] - OK
+virtual int: [] - OK
+virtual long: [] - OK
+virtual float: [] - OK
+virtual double: [] - OK
+virtual Object: [] - OK

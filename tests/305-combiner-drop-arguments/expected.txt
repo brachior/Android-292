@@ -1,0 +1,3 @@
+cat.invokeExact("x", "y") = xy
+(int,String,String,String)String = (int,String,String,String)String
+d0.invokeExact(123, "x", "y", "z") = yz

@@ -1,0 +1,23 @@
+static boolean: [true, true, false, true] - OK
+static byte: [5, 4, 6, 3] - OK
+static char: [t, o, t, o] - OK
+static short: [5, 4, 6, 3] - OK
+static int: [5, 4, 6, 3] - OK
+static long: [5, 4] - OK
+static float: [5.0, 4.0, 6.0, 3.0] - OK
+static double: [5.0, 4.0] - OK
+static Object: [foo, (, bar, )] - OK
+static array: [foo, (, bar, )] - OK
+static one: [foo(bar)] - OK
+ --------------- 
+virtual boolean: [true, true, false, true] - OK
+virtual byte: [5, 4, 6] - OK
+virtual char: [f, o, o, b, a, r] - OK
+virtual short: [5, 4, 6] - OK
+virtual int: [5, 4, 6] - OK
+virtual long: [5, 4, 6] - OK
+virtual float: [5.0, 4.0, 6.0] - OK
+virtual double: [5.0, 4.0, 6.0] - OK
+virtual Object: [foo, (, bar, )] - OK
+virtual array: [foo, (, bar, )] - OK
+virtual one: [foo(bar)] - OK

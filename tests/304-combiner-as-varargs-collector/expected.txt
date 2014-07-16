@@ -1,0 +1,14 @@
+ts1.invokeExact(new Object[]{"won"}) = [won]
+ts1.invoke(new Object[]{"won"}) = [won]
+ts1.invoke("won") = [won]
+ts1.invoke((Object) new Object[]{"won"}) = [[won]]
+asList.type() = (Object[])List
+asList.isVarargsCollector() = true
+asList.invoke().toString() = []
+asList.invoke(1).toString() = [1]
+asList.invoke("two", "too").toString() = [two, too]
+asList.invoke(argv).toString() = [three, thee, tee]
+asList.invoke((Object[]) argv).toString() = [three, thee, tee]
+(List) asList.invoke((Object)argv):
+	ls.size() = 1
+	Arrays.toString((Object[])ls.get(0)) = [three, thee, tee]

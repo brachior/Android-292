@@ -1,0 +1,10 @@
+deepToString.invokeExact(new Object[]{"won"}) = [won]
+ts1.type() = (Object)String
+ts1.invokeExact(new Object[]{"won"}) -> WrongMethodTypeException
+ts1.invokeExact((Object) new Object[]{"won"}) = [[won]]
+ts2.type() = (String,String)String
+ts2.invokeExact("two", "too") = [two, too]
+ts0.invokeExact() = []
+ts22.invokeExact((Object) 'A', (Object) "B", "C", "D") = [A, B, [C, D]]
+bytesToString.invokeExact((byte) 1, (byte) 2, (byte) 3) = [1, 2, 3]
+longsToString.invokeExact((long) 123) = [123]

@@ -1,0 +1,2 @@
+asType.invokeExact(1, 2) = 3.0
+asType.invokeExact(2, 2) = 4.0

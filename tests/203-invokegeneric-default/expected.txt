@@ -1,0 +1,19 @@
+static byte: 0 - OK
+static short: 0 - OK
+static int: 0 - OK
+static long: 0 - OK
+static float: 0.0 - OK
+static double: 0.0 - OK
+static char:  - OK
+static Object: null - OK
+static boolean: false - OK
+ --------------- 
+virtual byte: 0 - OK
+virtual short: 0 - OK
+virtual int: 0 - OK
+virtual long: 0 - OK
+virtual float: 0.0 - OK
+virtual double: 0.0 - OK
+virtual char:  - OK
+virtual Object: null - OK
+virtual boolean: false - OK

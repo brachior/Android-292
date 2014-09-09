@@ -6,8 +6,8 @@ import java.lang.invoke.MethodType;
 
 public class Main {
     public static void main(String[] args) {
-//        capture();
         simple();
+        capture();
   }
 
     private static void simple() {
@@ -20,13 +20,13 @@ public class Main {
         }
     }
 
-//    private static void capture() {
-//        System.out.print("bsmWithArguments: ");
-//        try {
-//            System.out.println(DynamicInvoker.callBsmWithArguments(5, 10) == 15 ? "true":"false");
-//        } catch (Throwable t) {
-//            System.out.println("false");
-//            t.printStackTrace();
-//        }
-//    }
+    private static void capture() {
+        System.out.print("bsmWithArguments: ");
+        try {
+            System.out.println(DynamicInvoker.callBsmWithArguments(5, 10) == 15 ? "true":"false");
+        } catch (Throwable t) {
+            System.out.println("false");
+            t.printStackTrace();
+        }
+    }
 }

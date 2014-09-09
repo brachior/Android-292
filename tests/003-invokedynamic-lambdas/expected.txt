@@ -1,1 +1,2 @@
 bsmWithArgumentsSimple: true
+bsmWithArguments: true

@@ -1,0 +1,3 @@
+cat.invokeExact("boo", "jum") = boojum
+catTrace.invokeExact("boo", "jum") = boo
+boojum

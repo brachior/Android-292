@@ -13,7 +13,7 @@ done
 shift $((OPTIND-1))
 
 RETVAL=0
-for d in `find . -maxdepth 1 -type d | tail -n +2 | sort`;
+for d in `find . -maxdepth 1 -type d -name "[0-9]*" | tail -n +2 | sort`;
 do
   ./run_test.sh $QUIET $d
   RETVAL=$(($RETVAL + $?))

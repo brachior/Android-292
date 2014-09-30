@@ -51,11 +51,11 @@ def which(program):
 def chunk_report(bytes_so_far, chunk_size, total_size):
   percent = float(bytes_so_far) / total_size
   percent = round(percent*100, 2)
-  stdout.write("  downloaded %d of %d bytes (%0.2f%%)\r" % (bytes_so_far, total_size, percent))
+  stdout.write("  downloaded " + str(bytes_so_far/1048576) + " of " + str(total_size/1048576) + " Mo (" + str(percent) + "%)\r")
   if bytes_so_far >= total_size:
     stdout.write('\n')
 
-def chunk_read(package, response, chunk_size=8192, report_hook=None):
+def chunk_read(package, response, chunk_size=524288, report_hook=None):
   total_size = response.info().getheader('Content-Length').strip()
   total_size = int(total_size)
   bytes_so_far = 0
@@ -129,10 +129,10 @@ def download_and_extract_aosp(version, force=False):
     exit(1)
   # check directory content
   if force:
-    for d in (d for d in listdir('.') if isdir(d) and not d.startswith('.')):
+    for d in (d for d in listdir('.') if isdir(d) and not (d.startswith('.') or d == "tests")):
       rmtree(d)
   else:
-    for d in (d for d in listdir('.') if isdir(d) and not d.startswith('.')):
+    for d in (d for d in listdir('.') if isdir(d) and not (d.startswith('.') or d == "tests")):
       print "directory not empty"
       exit(2)
   print "downloading Android package:"

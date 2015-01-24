@@ -21,8 +21,8 @@ You can download SDK releases and factory images for Nexus [here] [1]
 To use this work, you need to compile with Javac 7
 and run with the portable interpreter.
 
-/!\ WARNING /!\
-ART compile but can't execute yet !
+**/!\ WARNING /!\\**  
+ART compiles but can not run yet !
 
 ### Cloning
 
@@ -31,12 +31,16 @@ To get the whole project (including 'art', 'dalvik' and 'libcore'),
 you can download our modified AOSP package from our [website] [1] and clone each project
 or use the script 'aosp.py':
 
-  - _python aosp.py_
+``` bash
+python aosp.py
+```
 
 If no argument given, this script download the last version of our work.  
 To know the arguments list, type the command:
 
-  - _python aosp.py -h_
+``` bash
+python aosp.py -h
+```
 
 ### Create SDK 292
 
@@ -44,8 +48,26 @@ When the project is compiled,
 you can create an Android SDK to create/compile/install/... your applications.  
 To do this, initialize the project and make the SDK [(google website)] [8]:
 
-  - _lunch sdk-eng_
-  - _make [-j<NCPU>] sdk_
+``` bash
+lunch sdk-eng
+make [-j<NCPU>] sdk
+```
+
+### Create factory image
+
+The 'aosp.py' can create a factory image for a Nexus device using the compiled source:
+
+``` bash
+python aosp.py -i <device> [-v <version>] [-l]
+```
+
+Examples:
+
+``` bash
+python aosp.py -l -i . # list all factory versions availables
+python aosp.py -i manta # create the factory image for 'Nexus 10' with the last version
+python aosp.py -i manta -v 4.4.3.292 # create the factory image for 'Nexus 10' with the version '4.4.3.292'
+```
 
 ### How to flash a Nexus ?
 
@@ -54,35 +76,51 @@ extract them in the root of this project and then execute them.
 Initialize the project for your device.
 For example, to initialize with a Nexus 10 :
 
-  - _lunch full\_manta-eng_
+``` bash
+lunch full_manta-eng
+```
 
 When the project is compiled,
 connect your device and flash it (with root rights or with [(linux rules)] [10]).
 
-  - _fastboot -w flashall_
+``` bash
+fastboot -w flashall
+```
 
 Or you can use our [factory images] [1].
 
 ### Some useful commands to compile and use Android:
 
   - To initialize :
-    * _export EXPERIMENTAL_USE_JAVA7=true_
-    * _export USE_CCACHE=1_
-    * _source build/envsetup.sh_
-    * _lunch full-eng_
+``` bash
+export EXPERIMENTAL_USE_JAVA7=true
+export USE_CCACHE=1
+source build/envsetup.sh
+lunch full-eng
+```
   - To compile :
-    * _make [-j<NCPU>] [showcommands]_
-    * _mmm <directory>_
+``` bash
+make [-j<NCPU>] [showcommands]
+mmm <directory>
+```
   - To run :
-    * _emulator_
+``` bash
+emulator
+```
   - To use the portable interpreter (wrote in C)
-    * _adb shell stop_
-    * _adb shell setprop dalvik.vm.execution-mode int:portable_
-    * _adb shell start_
+``` bash
+adb shell stop
+adb shell setprop dalvik.vm.execution-mode int:portable
+adb shell start
+```
   - To use Dalvik (ART doesn't work yet !)
-    * _adb shell setprop persist.sys.dalvik.vm.lib libdvm.so_
+``` bash
+adb shell setprop persist.sys.dalvik.vm.lib libdvm.so
+```
   - To clean :
-    * _make clobber_
+``` bash
+make clobber
+```
 
   [1]: http://igm.univ-mlv.fr/~pilliet/en/#thesis
   [2]: http://www.oracle.com/us/technologies/java/overview/index.html

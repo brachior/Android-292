@@ -273,9 +273,9 @@ def _factory(version, factory):
             rmtree(dir_name, True)
             print 'factory image: %s' % package
             break
-        else:
-            print 'no factory available for the version "%s" and the device "%s"' % (version, factory)
-            exit(1)
+    else:
+        print 'no factory available for the version "%s" and the device "%s"' % (version, factory)
+        exit(1)
     exit(0)
 
 

@@ -1,0 +1,2 @@
+int(a) + 2 -> callPlus(290): 292 -> OK
+str(a) + 2 -> callPlus("JSR 29"): JSR 292 -> OK

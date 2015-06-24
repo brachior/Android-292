@@ -2,3 +2,11 @@
 	292.0 -> OK
   invoker -> (Object) invoke(mh, 2, 290):
 	292.0 -> OK
+  exactInvoker (generic) -> (linked A):
+	11 -> OK
+  exactInvoker (generic) -> (linked B):
+	11 -> OK
+  exactInvoker (exact) -> (linked A):
+	11 -> OK
+  exactInvoker (exact) -> (linked B):
+	11 -> OK
